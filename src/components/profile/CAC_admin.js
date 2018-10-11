@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 import {  Redirect } from 'react-router';
+import {Navigation} from "../common/navigation_bar"
 class profile extends Component {
+
   render() {
+    console.log(this.props.user)
     if(!this.props.user) return <Redirect to="/" />
     switch (this.props.user.info.user_type ){
       case "alumni"           :return <Redirect to="/alumni" />
       case "school_admin"     :return <Redirect to = "/school_admin" />
-      default: return <div>Cac admin page</div>
+      default: return (
+        <div>
+          <Navigation {...this.props.user.info}/>
+          Cac admin page
+        </div>)
     }
 
   }

@@ -6,8 +6,6 @@ import {Alumni_page} from "./components/profile/Alumni";
 import {Cac_admin_page} from "./components/profile/CAC_admin";
 import {School_admin_page} from "./components/profile/School_admin";
 import store from "./store"
-
-
 class App extends Component {
   render() {
     return (
