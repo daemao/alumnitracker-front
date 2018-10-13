@@ -3,14 +3,13 @@ import axios from "axios";
 import { connect } from "react-redux";
 import {logout} from "../../actions"
 import store from "../../store";
-
+import {NavLink} from "reactstrap"
 //design part
 const LogoutButtonClass = (props) =>{
   return (
-    <div onClick={(e)=>logout_handler(e,props.jwt)}> Logout</div>
+    <NavLink onClick={(e)=>logout_handler(e,props.jwt)} {...props} > Logout</NavLink>
   )
 }
-
 
 
 
