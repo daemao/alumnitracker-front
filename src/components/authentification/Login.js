@@ -7,7 +7,8 @@ import {  Redirect } from 'react-router';
 import JWT from 'jsonwebtoken';
 class Login extends Component {
   render() {
-    if (!this.props.user)return (
+    console.log(this.props)
+    if (!this.props.user.info)return (
       <div className="App">
         <p> Login</p>
         <form onSubmit={this.submit_form_handler.bind(this)}>
@@ -46,7 +47,7 @@ class Login extends Component {
 }
 
 const mapStateToProps = state => {
-  return { user: state.personal_info };
+  return { user: state.authentification };
 };
 const LoginForm = connect(mapStateToProps)(Login);
 export  {LoginForm};

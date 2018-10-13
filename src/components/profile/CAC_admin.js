@@ -12,7 +12,7 @@ class profile extends Component {
       case "school_admin"     :return <Redirect to = "/school_admin" />
       default: return (
         <div>
-          <Navigation {...this.props.user.info}/>
+          <Navigation/>
           Cac admin page
         </div>)
     }
@@ -21,7 +21,7 @@ class profile extends Component {
 }
 
 const mapStateToProps = state => {
-  return { user: state.personal_info };
+  return { user: state.authentification };
 };
 const Cac_admin_page = connect(mapStateToProps)(profile);
 export  {Cac_admin_page};

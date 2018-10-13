@@ -3,11 +3,18 @@ import axios from "axios";
 import { connect } from "react-redux";
 import {logout} from "../../actions"
 import store from "../../store";
+
+//design part
 const LogoutButtonClass = (props) =>{
   return (
     <div onClick={(e)=>logout_handler(e,props.jwt)}> Logout</div>
   )
 }
+
+
+
+
+//functionality part
 const logout_handler=(e,token)=>{
   e.preventDefault();
   var headers = {};
@@ -16,7 +23,7 @@ const logout_handler=(e,token)=>{
 }
 
 const mapStateToProps = state => {
-  return { jwt: state.personal_info.jwt };
+  return { jwt: state.authentification.jwt };
 };
 const LogoutButton = connect(mapStateToProps)(LogoutButtonClass);
 export  {LogoutButton};
