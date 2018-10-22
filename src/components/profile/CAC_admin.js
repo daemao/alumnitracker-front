@@ -4,9 +4,7 @@ import {  Redirect } from 'react-router';
 import {Navigation} from "../common/navigation_bar";
 import {ProfileBody} from "../common/cac_main_body";
 class profile extends Component {
-
   render() {
-    console.log(this.props.user)
     if(!this.props.user.info) return <Redirect to="/" />
     switch (this.props.user.info.user_type ){
       case "alumni"           :return <Redirect to="/alumni" />

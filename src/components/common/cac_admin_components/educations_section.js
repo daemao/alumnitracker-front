@@ -1,10 +1,9 @@
 import React from "react";
-import { connect } from "react-redux";
-const educations = (props)=>{
-  return (<div>Education section</div>)
+import {UniversitiesContainer} from './education_section/universities'
+const Education = (props)=>{
+  return (<div>
+    Education section
+    <UniversitiesContainer/>
+  </div>)
 }
-const mapStateToProps = state => {
-  return {};
-};
-const Education = connect(mapStateToProps)(educations);
 export  {Education};

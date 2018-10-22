@@ -4,7 +4,7 @@ const authentification = (state={}, action) => {
     case LOGIN:
       return { ...state,...action.payload };
     case LOGOUT:
-      return {}
+      return {authentification:{},cac_admin_reducer:{}}
     default:
       return state;
   }

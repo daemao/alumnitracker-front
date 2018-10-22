@@ -5,7 +5,7 @@ import {Nav,NavItem,NavLink} from "reactstrap";
 import store from "../../../store";
 import {select_section_in_navbar} from "../../../actions/index"
 const cac_navb=(props)=>{
-  const buttons = ["Organizations","Education","Nu university management","Account settings"];
+  const buttons = ["Organizations","Education","Alumni","Nu university management","Account settings"];
   return (
     <Nav justified pills fill>
       {buttons.map((elem,index)=>{

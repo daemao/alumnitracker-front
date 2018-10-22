@@ -1,0 +1,9 @@
+:local(.filter_select_buttons_near_name){
+   height: 100%;
+   position: absolute;
+   width: 10%;
+   top:0px;
+   right:0px;
+}
+:local(.filter_names_container){
+}
