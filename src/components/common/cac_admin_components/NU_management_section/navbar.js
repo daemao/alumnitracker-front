@@ -12,7 +12,7 @@ const navbar = (props) => {
   return (
     <div>
       <Breadcrumb tag="nav">
-        {props.tabs.map((element,index)=><BreadcrumbItem onClick = {e=>store.dispatch(go_back_in_navigation_in_nu_management(index))} key ={ "subnavbar" + element}tag="a" href="#">{element.endsWith("school_selector")?element.substr(0,element.length-15):element}</BreadcrumbItem>)}
+        {props.tabs.map((element,index)=><BreadcrumbItem onClick = {e=>store.dispatch(go_back_in_navigation_in_nu_management(index))} key ={ "subnavbar" + element}tag="a" href="#">{element.endsWith("school_selector")?element.substr(0,element.length-15):(element.endsWith("department_selector")?element.substr(0,element.length-19):element)}</BreadcrumbItem>)}
       </Breadcrumb>
     </div>
   );

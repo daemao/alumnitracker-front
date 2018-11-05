@@ -4,19 +4,32 @@ import { connect } from "react-redux";
 import store from "../../store";
 import {login} from "../../actions"
 import {  Redirect } from 'react-router';
+import {Form, FormGroup, Label, Input,Button,Container,Col,Row} from "reactstrap";
 import JWT from 'jsonwebtoken';
 class Login extends Component {
   render() {
     console.log(this.props)
     if (!this.props.user.info)return (
-      <div className="App">
-        <p> Login</p>
-        <form onSubmit={this.submit_form_handler.bind(this)}>
-        <input type = "text"     name="email"    placeholder="email" />
-        <input type = "password" name="password" placeholder="password" />
-        <button value = "submit" type="submit">Log in</button>
-        </form>
-      </div>
+      <Container className="App">
+        <Row>
+          <Col sm={{size:10, offset:1}} style={{marginTop:"25vh"}}>
+            <Form onSubmit={this.submit_form_handler.bind(this)}>
+              <FormGroup>
+                <center><h2>Login</h2></center>
+              </FormGroup>
+              <FormGroup>
+                <Input type = "text"     name="email"    placeholder="email" />
+              </FormGroup>
+              <FormGroup>
+                <Input type = "password" name="password" placeholder="password" />
+              </FormGroup>
+              <FormGroup>
+                <Button value = "submit" type="submit" block color="primary">Log in</Button>
+              </FormGroup>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
     );
     switch (this.props.user.info.user_type ){
       case "alumni"           :return <Redirect to="/alumni" />

@@ -5,7 +5,7 @@ import store from "../../../../store";
 import {Modal,ModalHeader,ModalBody,Form,Input,Label,FormGroup,ModalFooter, Button} from "reactstrap";
 const add_button = props =>{
   return <div>
-    <Button onClick = {(e)=>handleOpenModal(e)}>Add button</Button>
+    <Button onClick = {(e)=>handleOpenModal(e)}>Create new alumni</Button>
     <AddAlumniModal />
   </div>
 }

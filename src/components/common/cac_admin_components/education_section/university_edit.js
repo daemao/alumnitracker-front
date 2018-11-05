@@ -13,7 +13,7 @@ const EditButton = props=>{
 const modal  = props =>{
   return (
     <Modal isOpen={props.modal_state} >
-      <ModalHeader >Create new university</ModalHeader>
+      <ModalHeader >Change existing university</ModalHeader>
         <ModalBody>
         <Form onSubmit = {e=>{} } id="create_university_form">
           <FormGroup>

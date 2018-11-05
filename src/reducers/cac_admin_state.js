@@ -21,6 +21,19 @@ const cac_admin_reducer = (state={}, action) => {
           ...state
         }
     }
+    case CAC_ADMIN.SAVE_AVAILABLE_NU_SCHOOLS:{
+      if(action.program==="masters")return {...state,masters_schools:action.payload};
+      else return {...state,bachelor_schools:action.payload}
+    }
+    case CAC_ADMIN.OPEN_CREATE_NEW_SCHOOL_IN_NU_MANAGEMENT:{
+      return {...state,create_new_school_modal:true}
+    }
+    case CAC_ADMIN.CLOSE_CREATE_NEW_SCHOOL_IN_NU_MANAGEMENT:{
+      return {...state,create_new_school_modal:false};
+    }
+    case CAC_ADMIN.SAVE_AVAILABLE_NU_DEPARTMENTS:{
+      return {...state, nu_departments:{school:action.school, departments:action.payload}}
+    }
     case CAC_ADMIN.CREATE_NEW_ALUMNI_MODAL_OPEN:{
       return {...state,create_new_alumni_modal:true}
     }
@@ -187,6 +200,12 @@ const cac_admin_reducer = (state={}, action) => {
     }
     case CAC_ADMIN.OPEN_ADD_NEW_DEPARTMENT_MODAL:{
       return {...state, add_new_department_modal:true}
+    }
+    case CAC_ADMIN.CLOSE_CREATE_NEW_DEPARTMENT_IN_SCHOOL_MANAGEMENT:{
+      return {...state, create_nu_department:false}
+    }
+    case CAC_ADMIN.OPEN_CREATE_NEW_DEPARTMENT_IN_SCHOOL_MANAGEMENT:{
+      return {...state, create_nu_department:true}
     }
     case CAC_ADMIN.CLOSE_ADD_NEW_DEPARTMENT_MODAL:{
       return {...state, add_new_department_modal:false}

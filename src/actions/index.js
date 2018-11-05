@@ -41,3 +41,9 @@ export const close_create_new_alumni_cac_admin = () =>({type:CAC_ADMIN.CREATE_NE
 export const reset_navigation_in_nu_management = ()=>({type:CAC_ADMIN.RESET_NAVIGATION_IN_NU_MANAGEMENT});
 export const push_to_navigation_in_nu_management = element=>({type:CAC_ADMIN.PUSH_TO_NAVIGATION_IN_NU_MANAGEMENT,payload:element});
 export const go_back_in_navigation_in_nu_management = element =>({type:CAC_ADMIN.GO_TO_INDEX_IN_NAVBAR_IN_NU_MANAGEMENT,payload:element});
+export const open_create_new_department_in_nu_management = element =>({type:CAC_ADMIN.OPEN_CREATE_NEW_DEPARTMENT_IN_SCHOOL_MANAGEMENT,payload:element});
+export const close_create_new_department_in_nu_management = element =>({type:CAC_ADMIN.CLOSE_CREATE_NEW_DEPARTMENT_IN_SCHOOL_MANAGEMENT,payload:element});
+export const open_create_new_school_in_nu_management  = element => ({type:CAC_ADMIN.OPEN_CREATE_NEW_SCHOOL_IN_NU_MANAGEMENT,payload:element});
+export const close_create_new_school_in_nu_management  = element => ({type:CAC_ADMIN.CLOSE_CREATE_NEW_SCHOOL_IN_NU_MANAGEMENT,payload:element});
+export const save_available_schools = (payload, program) =>({type:CAC_ADMIN.SAVE_AVAILABLE_NU_SCHOOLS,payload:payload, program:program})
+export const save_available_departments = (payload,school)=> ({type:CAC_ADMIN.SAVE_AVAILABLE_NU_DEPARTMENTS,payload:payload,school:school})
