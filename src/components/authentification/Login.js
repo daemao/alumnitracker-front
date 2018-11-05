@@ -49,6 +49,7 @@ class Login extends Component {
       url: "/login",
       data: formData,
     }).then(res=>{
+      console.log(res);
       var decoded = JWT.decode(res.headers["x-auth"]);
       var user = {
         jwt:res.headers["x-auth"],
