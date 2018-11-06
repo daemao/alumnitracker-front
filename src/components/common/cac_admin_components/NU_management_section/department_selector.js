@@ -29,6 +29,9 @@ class department_selector extends React.Component{
   }
 };
 const mapStateToProps = state=>{
+  if(!state.cac_admin_reducer.nu_departments){
+    return {jwt:state.authentification.jwt,modal_state: state.cac_admin_reducer.create_nu_department,departments:[], school_in_state:state.cac_admin_reducer.nu_departments.school}
+  }
   return {jwt:state.authentification.jwt,modal_state: state.cac_admin_reducer.create_nu_department,departments:state.cac_admin_reducer.nu_departments.departments, school_in_state:state.cac_admin_reducer.nu_departments.school}
 }
 const DepartmentSelector = connect(mapStateToProps)(department_selector)
