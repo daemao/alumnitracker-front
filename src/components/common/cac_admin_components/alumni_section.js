@@ -12,7 +12,6 @@ class alumni_section extends React.Component{
   componentWillMount(){
     var headers={}
     headers["x-auth"] = this.props.jwt;
-    console.log("sad")
     axios({
       method: 'get',
       url: "/get_all_alumni",

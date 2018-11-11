@@ -21,6 +21,10 @@ const cac_admin_reducer = (state={}, action) => {
           ...state
         }
     }
+    case CAC_ADMIN.SAVE_AVAILABLE_DEPARTMENTS_IN_CREATE_ALUMNI:{
+      console.log("asd")
+      return {...state, selected_departments_in_create_alumni:action.payload};
+    }
     case CAC_ADMIN.SAVE_AVAILABLE_NU_SCHOOLS:{
       if(action.program==="masters")return {...state,masters_schools:action.payload};
       else return {...state,bachelor_schools:action.payload}

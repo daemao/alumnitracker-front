@@ -47,3 +47,4 @@ export const open_create_new_school_in_nu_management  = element => ({type:CAC_AD
 export const close_create_new_school_in_nu_management  = element => ({type:CAC_ADMIN.CLOSE_CREATE_NEW_SCHOOL_IN_NU_MANAGEMENT,payload:element});
 export const save_available_schools = (payload, program) =>({type:CAC_ADMIN.SAVE_AVAILABLE_NU_SCHOOLS,payload:payload, program:program})
 export const save_available_departments = (payload,school)=> ({type:CAC_ADMIN.SAVE_AVAILABLE_NU_DEPARTMENTS,payload:payload,school:school})
+export const save_available_departments_in_create_alumni = (payload)=> ({type:CAC_ADMIN.SAVE_AVAILABLE_DEPARTMENTS_IN_CREATE_ALUMNI,payload:payload})

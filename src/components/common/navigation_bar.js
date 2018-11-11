@@ -1,12 +1,12 @@
 import React from 'react';
-import {CAC_NAVBAR as CacNavbar} from "./navigation_bar_subcomponents";
+import {CAC_NAVBAR as CacNavbar, ALUMNI_NAVBAR as Alumni_Navbar} from "./navigation_bar_subcomponents";
 import { connect } from "react-redux";
 
 
 //design
 const navigation = (props)=>{
   if(props.user.user_type === "alumni"){
-    return <div>Navbar for alumni</div>
+    return <Alumni_Navbar />
   }
   else if(props.user.user_type === "cac_admin") return <CacNavbar/>
 }
